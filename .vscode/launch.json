@@ -1,0 +1,49 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Launch RobotMoving",
+			"request": "launch",
+			"mainClass": "robot.RobotMoving",
+			"projectName": "NLDS_A02_9195e825"
+		},
+		{
+			"type": "java",
+			"name": "Launch PaperRollCuttingBottomUp",
+			"request": "launch",
+			"mainClass": "paper_roll.PaperRollCuttingBottomUp",
+			"projectName": "NLDS_A02_9195e825"
+		},
+		{
+			"type": "java",
+			"name": "Launch PaperRollMain",
+			"request": "launch",
+			"mainClass": "paper_roll.PaperRollMain",
+			"projectName": "NLDS_A02_9195e825"
+		},
+		{
+			"type": "java",
+			"name": "Launch RobotMoving",
+			"request": "launch",
+			"mainClass": "RobotMoving",
+			"projectName": "NLDS_A02_9195e825"
+		},
+		{
+			"type": "java",
+			"name": "Launch Current File",
+			"request": "launch",
+			"mainClass": "${file}"
+		},
+		{
+			"type": "java",
+			"name": "Launch PaperRollCuttingBottomUp",
+			"request": "launch",
+			"mainClass": "PaperRollCuttingBottomUp",
+			"projectName": "NLDS_A02_9195e825"
+		}
+	]
+}
