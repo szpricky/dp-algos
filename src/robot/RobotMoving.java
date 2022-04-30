@@ -6,7 +6,7 @@ package robot;
  * 
  * @author Patrik Richard Szilagyi R00198735
  */
-public class RobotMoving {
+public class RobotMoving implements RobotMovement {
     /* Class Attributes */
     private double[][] totalCost, moves;
     private double[] moveCosts;
@@ -21,12 +21,7 @@ public class RobotMoving {
         this.moveCosts = costs;
     }
 
-    /**
-     * Computes the path with minimum energy cost.
-     * 
-     * @param n Size of matrix
-     * @return Minimum energy cost of navigating through matrix
-     */
+    @Override
     public double moveOnShortestPath(int n) {
         /* Exit the function if invalid parameter is provided */
         if (n < 1) {
@@ -83,9 +78,7 @@ public class RobotMoving {
         return totalCost[n][n];
     }
 
-    /**
-     * Prints out the movements of the robot taken through the matrix.
-     */
+    @Override
     public void printResults() {
         int row = this.size, column = this.size;
 
@@ -108,22 +101,5 @@ public class RobotMoving {
             }
         }
         System.out.println("\n");
-    }
-
-    public static void main(String[] args) {
-        double[] c1 = { 1.1, 1.3, 2.5 }, c2 = { 1.5, 1.2, 2.3 };
-        int size = 4;
-
-        /* Robot with energy costs c1 */
-        RobotMoving robot1 = new RobotMoving(c1);
-        double totalCost1 = robot1.moveOnShortestPath(size);
-        System.out.printf("Minimum energy cost: \u20ac%.2f%n", totalCost1);
-        robot1.printResults();
-
-        /* Robot with energy costs c2 */
-        RobotMoving robot2 = new RobotMoving(c2);
-        double totalCost2 = robot2.moveOnShortestPath(size);
-        System.out.printf("Minimum energy cost: \u20ac%.2f%n", totalCost2);
-        robot2.printResults();
     }
 }
