@@ -1,21 +1,26 @@
 package paper_roll;
 
 /**
- * Paper Roll main
+ * Main file for Paper Roll Cutting
  * 
  * @author Richard Szilagyi R00198735
  */
 public class PaperRollMain {
     public static void main(String[] args) {
-        // PaperRollCuttingBottomUp p = new PaperRollCuttingBottomUp();
+        /* Create instance of PaperRollCuttingBottomUp */
+        PaperRollCuttingBottomUp paperRoll = new PaperRollCuttingBottomUp();
 
-        // p.prices.add(1.2);
-        // p.prices.add(3.0);
-        // p.prices.add(5.8);
-        // p.prices.add(10.1);
+        /* Add the prices */
+        paperRoll.addPrice(1.2);
+        paperRoll.addPrice(3);
+        paperRoll.addPrice(5.8);
+        paperRoll.addPrice(10.1);
 
-        // double bestPrice = p.cutPaper(p.prices.size());
-
-        // System.out.println(bestPrice);
+        /* Output */
+        for (int size = 1; size <= paperRoll.getPrices().size(); size++) {
+            double optimalRevenue = paperRoll.cutRoll(size);
+            paperRoll.printResults();
+            System.out.printf("Optimal revenue: \u20ac%.1f%n%n", optimalRevenue);
+        }
     }
 }

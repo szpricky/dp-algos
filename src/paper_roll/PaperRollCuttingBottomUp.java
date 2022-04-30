@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * 
  * @author Richard Szilagyi R00198735
  */
-public class PaperRollCuttingBottomUp {
+public class PaperRollCuttingBottomUp implements PaperRollCutting {
     /** Class Attributes */
     private final ArrayList<Double> prices; // holds prices of each paper length
     private int[] cuts; // holds positions of each cut
@@ -22,39 +22,18 @@ public class PaperRollCuttingBottomUp {
         this.prices = new ArrayList<>();
     }
 
-    /**
-     * Adds price to a paper roll.
-     * 
-     * @param price Price of paper roll
-     */
     public void addPrice(double price) {
         this.prices.add(price);
     }
 
-    /**
-     * Gets the `prices` Array List.
-     * 
-     * @return Array List holding the prices of each paper length
-     */
     public ArrayList<Double> getPrices() {
         return prices;
     }
 
-    /**
-     * Gets the `cuts` array.
-     * 
-     * @return Array holding the positions of each cut
-     */
     public int[] getCuts() {
         return this.cuts;
     }
 
-    /**
-     * Computes the best revenue of cutting the roll into several roll-pieces.
-     * 
-     * @param n Size of the desired paper roll.
-     * @return Optimal price after cutting the roll into pieces.
-     */
     public double cutRoll(int n) {
         /* Exit the function if invalid parameter is provided */
         if (n < 1) {
@@ -85,9 +64,6 @@ public class PaperRollCuttingBottomUp {
         return optimalPrices[n];
     }
 
-    /**
-     * Prints out the best price and the cut for each paper roll length.
-     */
     public void printResults() {
         System.out.println("Rod length: " + this.size);
 
@@ -104,21 +80,4 @@ public class PaperRollCuttingBottomUp {
         }
     }
 
-    public static void main(String[] args) {
-        /* Create instance of PaperRollCuttingBottomUp */
-        PaperRollCuttingBottomUp paperRoll = new PaperRollCuttingBottomUp();
-
-        /* Add the prices */
-        paperRoll.addPrice(1.2);
-        paperRoll.addPrice(3);
-        paperRoll.addPrice(5.8);
-        paperRoll.addPrice(10.1);
-
-        /* Output */
-        for (int size = 1; size <= paperRoll.getPrices().size(); size++) {
-            double optimalRevenue = paperRoll.cutRoll(size);
-            paperRoll.printResults();
-            System.out.printf("Optimal revenue: \u20ac%.1f%n%n", optimalRevenue);
-        }
-    }
 }
