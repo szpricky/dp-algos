@@ -22,18 +22,22 @@ public class PaperRollCuttingBottomUp implements PaperRollCutting {
         this.prices = new ArrayList<>();
     }
 
+    @Override
     public void addPrice(double price) {
         this.prices.add(price);
     }
 
+    @Override
     public ArrayList<Double> getPrices() {
         return prices;
     }
 
+    @Override
     public int[] getCuts() {
         return this.cuts;
     }
 
+    @Override
     public double cutRoll(int n) {
         /* Exit the function if invalid parameter is provided */
         if (n < 1) {
@@ -64,6 +68,7 @@ public class PaperRollCuttingBottomUp implements PaperRollCutting {
         return optimalPrices[n];
     }
 
+    @Override
     public void printResults() {
         System.out.println("Rod length: " + this.size);
 
