@@ -6,6 +6,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch RobotMain",
+			"request": "launch",
+			"mainClass": "robot.RobotMain",
+			"projectName": "NLDS_A02_9195e825"
+		},
+		{
+			"type": "java",
 			"name": "Launch RobotMoving",
 			"request": "launch",
 			"mainClass": "robot.RobotMoving",
