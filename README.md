@@ -1,18 +1,20 @@
-## Getting Started
+# Dynamic Programming Algorithms
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Introduction
 
-## Folder Structure
+This project is part of a Non-Linear Data Structures and Algorithms assignment. A number of problems are included for which a solution has been implemented using a dynamic programming algorithmic technique.
 
-The workspace contains two folders by default, where:
+## Project Structure
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+The project contains two packages, where:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+-   `paper_roll`: the package for finding the optimal price of a paper roll to obtain the best revenue.
+-   `robot`: the package for finding the path with the minimum energy cost for moving a robot through a matrix.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Paper Roll Cutting
 
-## Dependency Management
+The solution for this problem has been implemented using a bottom up approach in the `PaperRollCuttingBottomUp.java` file. The solution is tested in the `PaperRollMain.java` file. In brief, the `cutRoll()` method computes the best revenue of cutting the roll into several roll-pieces.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Robot Moving
+
+The solution for this problem has been implemented using a bottom up approach in the `RobotMoving.java` file. The solution is tested in the `RobotMain.java` file. In brief, the `moveOnShortestPath()` method computes the path with the minimum energy cost for the robot to take from start to finish.
